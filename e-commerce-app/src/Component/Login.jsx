@@ -1,7 +1,9 @@
 import React,{useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import './login.css'
 
 export default function Login() {
+  const navigate = useNavigate() 
   const [value,setValue]=useState({
 
     email:"",
@@ -102,14 +104,11 @@ const onSubmit= function(ele){
               <label class="form-check-label" for="form1Example3"> Remember password </label>
             </div>
 
-            <button class="btn btn-primary btn-lg btn-block" type="submit" onClick={onSubmit}>Login</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" onClick={navigate('/products')}>Login</button>
 
             <hr class="my-4"/>
 
-            <button class="btn btn-lg btn-block btn-primary background2"
-              type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-            <button class="btn btn-lg btn-block btn-primary mb-2 background3" 
-              type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
+          
 
           </div>
         </div>
