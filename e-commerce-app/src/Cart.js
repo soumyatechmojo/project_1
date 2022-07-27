@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import logo from "./logo.svg";
 import { useNavigate } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
-//import cartImg from "./cart.jpg";
+import cartImg from "./cart.jpg";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
@@ -56,10 +56,10 @@ export default function Cart () {
                     />
                     Home
                 </Navbar.Brand>
-                {/* <Nav className="text-end">
+                <Nav className="text-end">
                     <Nav href="/"><img src={cartImg} style={{width:"40px", height:"40px"}} onClick={goToCart} alt="cart"></img></Nav>
                     <Nav className="fw-bolder" style={{color:"white"}}>{cartCount}</Nav>
-                </Nav> */}
+                </Nav>
                 </Container>
             </Navbar>
             <Container>
