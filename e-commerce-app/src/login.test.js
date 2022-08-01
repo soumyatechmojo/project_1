@@ -15,7 +15,7 @@ test("mock navigate to next page", ()=>{
 
 
     var password = screen.getByPlaceholderText("Password")
-    fireEvent.change(password,{target:{value: "Rkm@12353" }});
+    fireEvent.change(password,{target:{value: "Rkm@123" }});
 
     var button = screen.getByRole('button')
     fireEvent.click(button)
