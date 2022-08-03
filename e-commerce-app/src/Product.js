@@ -13,9 +13,9 @@ import { useNavigate } from "react-router-dom";
 import { isSelected, loadAllProducts } from "./Reducers";
 import { useSelector, useDispatch} from "react-redux";
 import axios from 'axios';
-//import cartImg from "./cart.jpg";
+import cartImg from "./cart.jpg";
 import Nav from 'react-bootstrap/Nav';
-//import loadImg from "./loading.gif";
+import loadImg from "./loading.gif";
 
 export default function Products () {
     var brands = ["OPPO","Apple","Samsung","Huawei","Ifei Home","Soft Cotton"];
@@ -169,9 +169,9 @@ export default function Products () {
     if (loading) {
         return (
             <>
-            {/* <Container>
+            <Container>
                 <img src={loadImg} alt='loading' style={{display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"}}></img>
-            </Container> */}
+            </Container>
             </>
         )
     }
@@ -192,10 +192,10 @@ export default function Products () {
                 <Nav className="text-start" onClick={()=>navigate("/Add-Product")}>
                     <Nav style={{color:"white"}}>Add products</Nav>
                 </Nav>
-                {/* <Nav className="text-end">
+                <Nav className="text-end">
                     <Nav href="/"><img src={cartImg} style={{width:"40px", height:"40px"}} onClick={goToCart} alt="cart"></img></Nav>
                     <Nav className="fw-bolder" style={{color:"white"}}>{cartCount}</Nav>
-                </Nav> */}
+                </Nav>
                 </Container>
             </Navbar>
 
