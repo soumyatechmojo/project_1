@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useEffect, useState } from "react";
@@ -283,11 +284,7 @@ export default function Products () {
                                 <Card.Text>Price: ${price}</Card.Text>
                                 <Card.Text>Category: {category}</Card.Text>
                                 <Card.Text>Rating: {rating}</Card.Text>
-                                <Card.Text 
-                                    style={{color:"blue", textDecoration:"underline"}}
-                                    onClick={()=>selectCard(product["id"])}>
-                                    Learn more
-                                </Card.Text>
+                                <Button className='btn-primary' onClick={()=>selectCard(product["id"])}>Learn More</Button>
                                 </Card.Body>
                                 </Card></Col>;
                                 return card;

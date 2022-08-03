@@ -18,20 +18,20 @@ var handleValidation = (e) => {
     var validPassword = false;
 
     e.preventDefault();
-    var Regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/
+    var Regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
 
-    if (email.current.value.length > 0 && email.current.value === "soumya@gmail.com") {
+    if (/(^$|^.*@.*\..*$)/.test(email.current.value)) {
         validEmail = true;
     } 
     else {
-        setEmailError("Invalid User");
+        setEmailError("Invalid Email");
     }
 
     if (password.current.value.match(Regex)){
         validPassword = true;
     }
     else {
-        setErrors("Password must contain Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character");
+        setErrors("Password must contain eigth to fifteen characters, one upper case, one lower case and one special character.");
     }
 
     if (validEmail && validPassword) {
