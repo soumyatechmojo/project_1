@@ -8,31 +8,31 @@ jest.mock ("react-router-dom",()=>({
 }));
 
 //Only email
-// test("Test if email value matches with input", () => {
-//     render(<Login />);
+test("Test if email value matches with input", () => {
+    render(<Login />);
 
-//     var email = screen.getByPlaceholderText("Enter email");
-//     fireEvent.change(email,{target: {value: "ram@gmail"}});
+    var email = screen.getByPlaceholderText("Enter email");
+    fireEvent.change(email,{target: {value: "soumya@gmail.com"}});
 
-//     var button = screen.getByRole("button");
-//     fireEvent.click(button);
-//     // screen.debug()
+    var button = screen.getByRole("button");
+    fireEvent.click(button);
+    // screen.debug()
 
-//     expect(email.value).toBe("ram@gmail");
-// })
+    expect(email.value).toBe("soumya@gmail.com");
+})
 
-//Only password
+// //Only password
 // test("Test if password value matches with input", () => {
 //     render(<Login />);
 
 //     var pass = screen.getByPlaceholderText("Password");
-//     fireEvent.change(pass,{target: {value: "Ram@12"}});
+//     fireEvent.change(pass,{target: {value: "rkm@123"}});
 
 //     var button = screen.getByRole("button");
 //     fireEvent.click(button);
-//     // screen.debug()
+//     //screen.debug()
 
-//     expect(pass.value).toBe("Ram@12");
+//     expect(pass.value).toBe("rkm@123");
 // })
 
 //Email  error
@@ -40,7 +40,7 @@ jest.mock ("react-router-dom",()=>({
 //     render(<Login />);
 
 //     var email = screen.getByPlaceholderText("Enter email");
-//     fireEvent.change(email,{target: {value: "ram@gmail"}});
+//     fireEvent.change(email,{target: {value: "soumya@gmail.com"}});
 
 //     var button = screen.getByRole("button");
 //     fireEvent.click(button);
@@ -61,8 +61,8 @@ jest.mock ("react-router-dom",()=>({
 //     fireEvent.click(button);
 //     // screen.debug()
 
-//     var pe = screen.getAllByText("Password must contain Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character")
-//     expect(pe[0]).toHaveClass("passwordError");
+//     var pe = screen.getByText("Password must contain Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character")
+//     expect(pe).toHaveClass("passwordError");
 // })
 
 //Both email and password error
@@ -70,10 +70,10 @@ jest.mock ("react-router-dom",()=>({
 //     render(<Login />);
 
 //     var email = screen.getByPlaceholderText("Enter email");
-//     fireEvent.change(email,{target: {value: "ram@gmail"}});
+//     fireEvent.change(email,{target: {value: "soumya@gmail.com"}});
 
 //     var password = screen.getByPlaceholderText("Password");
-//     fireEvent.change(password, {target: {value:"Ramsan@"}});
+//     fireEvent.change(password, {target: {value:"rkm"}});
 
 //     var button = screen.getByRole("button");
 //     fireEvent.click(button);
@@ -88,16 +88,17 @@ jest.mock ("react-router-dom",()=>({
 
 //Mocking navigate
 
-test("mock navigate to next page", ()=>{
-    render(<Login/>);
 
-    var email = screen.getByPlaceholderText("Enter email");
-    fireEvent.change(email, {target:{ value: 'soumya@gmail.com' }});
+// test("mock navigate to next page", ()=>{
+//     render(<Login/>);
+
+//     var email = screen.getByPlaceholderText("Enter email");
+//     fireEvent.change(email, {target:{ value: 'soumya@gmail.com' }});
 
 
-    var password = screen.getByPlaceholderText("Password")
-    fireEvent.change(password,{target:{value: "Rkm@123" }});
+//     var password = screen.getByPlaceholderText("Password")
+//     fireEvent.change(password,{target:{value: "Rkm@123" }});
 
-    var button = screen.getByRole('button')
-    fireEvent.click(button)
-})
+//     var button = screen.getByRole('button')
+//     fireEvent.click(button)
+// })
